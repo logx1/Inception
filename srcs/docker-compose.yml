@@ -6,7 +6,7 @@ services:
     container_name: nginx
     image: nginx
     volumes:
-      - ./data/wordpress:/var/www/html
+      - wp-volumes:/var/www/html
     ports:
       - "443:443"
     restart: always
@@ -22,7 +22,7 @@ services:
       - .env
     restart: always
     volumes:
-      - ./data/mariadb:/var/lib/mysql
+      - db-volumes:/var/lib/mysql
     networks:
       - lol
   wordpress:
@@ -35,10 +35,21 @@ services:
     depends_on:
       - mariadb
     volumes:
-      - ./data/wordpress:/var/www/wordpress
+      - wp-volumes:/var/www/wordpress
     networks:
       - lol
 
+volumes:
+  wp-volumes:
+    driver_opts:
+      type: "none"
+      device: "/home/ubuntu/data/wordpress"
+      o: "bind"
+  db-volumes:
+    driver_opts:
+      type: "none"
+      device: "/home/ubuntu/data/mariadb"
+      o: "bind"
 networks:
   lol:
     driver: bridge
