@@ -4,13 +4,13 @@
 DB_NAME="wordpress_db"
 DB_USER="wordpress_user"
 DB_PASS="wordpress_password"
-WORDPREESS_ADMIN_USER="abdel-ou"
-WORDPREESS_ADMIN_PASS="lolabdel-ou@123"
-WORDPREESS_ADMIN_EMAIL="lol@gmail.lol"
-WORDPREESS_EDITOR_USER="xeditor"
-WORDPREESS_EDITOR_PASS="editor@123"
-WORDPREESS_EDITOR_EMAIL="xeditor@lol.com"
-DOMIN_NAME="lol.tatbiqi.xyz"
+WORDPRESS_ADMIN_USER="abdel-ou"
+WORDPRESS_ADMIN_PASS="lolabdel-ou@123"
+WORDPRESS_ADMIN_EMAIL="lol@gmail.lol"
+WORDPRESS_EDITOR_USER="xeditor"
+WORDPRESS_EDITOR_PASS="editor@123"
+WORDPRESS_EDITOR_EMAIL="xeditor@lol.com"
+DOMAIN_NAME="lol.tatbiqi.xyz"
 
 
 # if [ ! -f "/var/www/wordpress/wp-config.php" ]; then
